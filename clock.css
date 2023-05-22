@@ -1,0 +1,113 @@
+ @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: #404258;
+    position: relative;
+}
+
+.clock{
+    width: 400px;
+    height: 400px;
+    background: #404145;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px solid salmon;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
+    inset 4px 4px 10px rgba(0,0,0,0.5),
+    inset -4px -4px 10px rgba(67,67,67,0.5),
+    4px 4px 10px rgba(0,0,0,0.3);
+}
+
+ .clock::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: turquoise;
+    border-radius: 50%;
+    z-index: -1;
+} 
+
+.clock::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: tomato;
+    border-radius: 50%;
+    border: 5px solid turquoise;
+    z-index: 1;
+}
+
+.clock span{
+    position: absolute;
+    inset: 20px;
+    color: turquoise;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+    font-size: 25px;
+}
+
+.clrChange{
+    color: salmon;
+}
+
+.position{
+    position: relative;
+    top: 350px;
+}
+
+#hourHand{
+    position: absolute;
+    left: 190px;
+    top: 103px;
+    width: 8px;
+    height: 90px;
+    background-color: tomato;
+    border-radius: 10px;
+    transform-origin: bottom;
+    z-index: -4;
+}
+
+#minHand{
+    position: relative;
+    left: 186px;
+    top: 68px;
+    width: 9px;
+    height: 120px;
+    background-color: turquoise;
+    border-radius: 10px;
+    transform-origin: bottom;
+    z-index: -3;
+}
+
+#secHand{
+    position: absolute;
+    left: 190px;
+    top: 50px;
+    width: 5px;
+    height: 140px;
+    background-color: turquoise;
+    border-radius: 10px;
+    transform-origin: bottom;
+    z-index: -2;
+} 
